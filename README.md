@@ -14,9 +14,9 @@ Just 3 steps, quick game and withdraw your earnings
 Coinslot是一个基于以太坊区块链技术开发的公开、透明、可追溯的智能合约博彩游戏平台。玩家们可以使用以太币和比特币进行游戏来赚取对应的奖品，公司旗下有多款使用以太币和比特币进行交易和体验的高频赌场、彩票、扑克和夺宝类游戏。
 
 ## 仅需 3 步，迅速游戏，并提现你的收益
-一、安装 Metamask 钱包
-二、选择队伍
-三、提现收益
+一、安装 Metamask 钱包 
+二、选择队伍 
+三、提现收益 
 
 
 ##  Contract
@@ -27,4 +27,4 @@ https://www.coinslot.com
 
 
 ## game images
-![Image text](https://github.com/CoinslotBV/superCoin/blob/master/gameImg/dream.png)
+![Image text](https://github.com/CoinslotBV/Dream-of-the-West-Journey/blob/master/gameImg/dream.png)

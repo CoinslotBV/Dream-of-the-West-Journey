@@ -1,0 +1,715 @@
+
+.fr{
+    float: right;
+}
+.logo {
+    display: block;
+    width: 38px;
+    height: 39px;
+    margin: 0 8px;
+}
+.head-share {
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none !important;
+    p {
+        margin-left: 4px;
+        font-size: 16px;
+        color: #39ca68;
+        font-weight: bold;
+        @media (max-width: 550px) {
+            display: none;
+        }
+    }
+   
+}
+
+.hide {
+    display: none !important;
+}
+
+.banner {
+    text-align: center;
+    color: #fff;
+    .msg1,
+    .msg2 {
+        line-height: 78px;
+        font-size: 60px;
+    }
+    .msg3 {
+        position: relative;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+        line-height: 95px;
+        font-size: 78px;
+        font-weight: bold;
+        background: url(../img/bg-bannereth.png) no-repeat center;
+        background-size: 611px;
+        p {
+            font-weight: bold;
+            background-image: -webkit-linear-gradient(top, #fff, #f5c751);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #ffeb67;
+        }
+        &::after {
+            content: "";
+            display: block;
+            margin-left: 20px;
+            width: 28px;
+            height: 47px;
+            overflow: hidden;
+            background: url(../img/icon-eth.png) no-repeat center;
+        }
+    }
+    .headtimer {
+        display: block;
+        height: 72px;
+        line-height: 46px;
+        font-size: 34px;
+        color: #f5c751;
+    }
+    a {
+        position: relative;
+        display: block;
+        max-width: 1190px;
+        width: 92%;
+        height: 50px;
+        margin: 0 auto;
+        line-height: 50px;
+        font-size: 22px;
+        color: #fff;
+        background: linear-gradient(to right, #5a4822, #bb9540, #5a4822);
+        animation: pulse 0.75s infinite;
+        border-radius: 8px;
+        i {
+            display: block;
+            position: absolute;
+            left: 40px;
+            top: 0;
+            font-style: normal;
+            padding-left: 33px;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 14px;
+                width: 21px;
+                height: 22px;
+                overflow: hidden;
+                background: url(../img/icon-diamond.png) no-repeat center;
+            }
+        }
+        &:hover {
+            animation: none;
+        }
+        &.isOver{
+
+        }
+    }
+}
+.icon-diamond {
+    display: block;
+    overflow: hidden;
+    background: url(../img/icon-diamond.png) no-repeat center;
+    background-size: 21px;
+}
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(187, 149, 64, 0.8);
+        box-shadow: 0 0 0 0 rgba(187, 149, 64, 0.8);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 5px rgba(187, 149, 64, 0.3);
+        box-shadow: 0 0 0 5px rgba(187, 149, 64, 0.3);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 10px rgba(187, 149, 64, 0);
+        box-shadow: 0 0 0 10px rgba(187, 149, 64, 0);
+    }
+}
+
+.put-forward-list {
+    margin-top: 20px;
+    background: #1b1b1b;
+    padding: 0 42/53rem;
+    .put-forward {
+        position: relative;
+        padding: 35px 0 28px 0;
+        overflow: hidden;
+        .title {
+            position: relative;
+            float: left;
+            padding-left: 45px;
+            line-height: 46px;
+            font-size: 16px;
+            color: #fff;
+            &.icon-diao {
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 11px;
+                    width: 21px;
+                    height: 22px;
+                    background: url(../img/icon-diamond.png) no-repeat center;
+                    background-size: cover;
+                }
+            }
+            &.icon-gift {
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    width: 24px;
+                    height: 26px;
+                    background: url(../img/icon-gift.png) no-repeat center;
+                    background-size: cover;
+                }
+            }
+            &.icon-eth {
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 12px;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../img/icon-eth2.png) no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
+        .eth {
+            float: right;
+            line-height: 46px;
+            font-size: 30px;
+            color: #f5c751;
+            &::after {
+                content: "ETH";
+                display: inline;
+                font-size: 20px;
+                margin-left: 10px;
+            }
+        }
+        .count{
+            float: right;
+            line-height: 46px;
+            font-size: 30px;
+            color: #f5c751;
+            &::after {
+                content: "";
+                display: inline;
+                font-size: 20px;
+                margin-left: 10px;
+            }
+        }
+        .usdt {
+            position: absolute;
+            right: 0px;
+            top: 70px;
+            font-size: 20px;
+            color: #39ca68;
+        }
+    }
+    .put-forward + .put-forward {
+        border-top: 1px solid #262626;
+    }
+}
+.js_noid {
+    .tip {
+        margin-bottom: 20px;
+    }
+    .joinus-btn {
+        padding: 0.36rem 0.75rem;
+        font-size: 16px;
+        color: #fff;
+        .btn {
+            margin-top: 30px;
+        }
+    }
+}
+.team-grid {
+    .tip {
+        margin-bottom: 20px;
+    }
+    .tip2 {
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    .btn2 {
+        display: block;
+        width: 198px;
+        height: 50px;
+        margin: 0 auto;
+        border: 1px solid #f5c751;
+        border-radius: 8px;
+        background: transparent;
+        outline: none;
+        font-size: 20px;
+        color: #f5c751;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            background: #f5c751;
+            color: #fff;
+        }
+    }
+}
+.joinus {
+    padding: 0.36rem 0 !important;
+    .tip2,
+    .tip {
+        padding: 0 0.75rem;
+    }
+    .referrals_cnt {
+        background: #1b1b1b;
+        padding: 0 40px 50px;
+        li {
+            padding-top: 10px;
+            .title {
+                line-height: 35px;
+                font-size: 16px;
+                color: #fff;
+                font-weight: bold;
+            }
+            .msg {
+                margin-bottom: 10px;
+                line-height: 32px;
+                text-align: center;
+                font-size: 14px;
+                color: rgab(255, 255, 2550, 0.6);
+            }
+        }
+        li + li {
+            margin-top: 40px;
+        }
+    }
+}
+.tabs .tab-content.round,.tabs .tab-content.team,.tabs .tab-content.statistics  {
+    padding: 0;
+}
+.choseteam{
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #fff;
+}
+.round {
+    .round-list{
+        padding: 28px 40px;
+          li{
+              display: flex;
+              justify-content: space-between;
+              height: 60px;
+              line-height: 60px;
+              overflow: hidden;
+              font-size: 16px;
+              color: #fff;
+          }
+        .account{
+            font-size: 16px;
+            color: #f5c751;
+        }
+        .dead-time{
+            font-size: 30px;
+            color: #f5c751;
+        }
+        .total_prize_pool{
+            font-size: 30px;
+            color: #f5c751;
+            &::after{
+                content: ' ETH';
+                display: inline;
+                font-size: 20px;
+            }
+        }
+    }
+    .round-list2{
+        padding: 28px 40px;
+        background: #1b1b1b;
+        li{
+            display: flex;
+            justify-content: space-between;
+            height: 66px;
+            line-height: 66px;
+            overflow: hidden;
+            font-size: 16px;
+            color: #fff;
+            span{
+                position: relative;
+                display: block;
+                padding-left: 45px;
+                &.icon-diao{
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top:22px;
+                        width: 21px;
+                        height: 22px;
+                        background: url(../img/icon-diamond.png) no-repeat center;
+                        background-size: cover;
+                    }
+                }
+                &.icon-gift{
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top:20px;
+                        width: 24px;
+                        height: 26px;
+                        background: url(../img/icon-gift.png) no-repeat center;
+                        background-size: cover;
+                    }
+                }
+                &.icon-eth{
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top:21px;
+                        width: 24px;
+                        height: 24px;
+                        background: url(../img/icon-eth2.png) no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+            p{
+                font-size: 20px;
+                color: #f5c751;
+            }
+        }
+    }
+}
+.team{
+    position: relative;
+    >h2{
+        position: absolute;
+        left: 40px;
+        top: 0;
+        line-height: 60px;
+        font-size: 16px;
+        color: #fff;
+    }
+    .team-box{
+        padding-top: 30px;
+        li{
+            line-height: 86px;
+            padding: 30px 40px;
+            overflow: hidden;
+            img{
+                float: left;
+                width: 66px;
+                height: 86px;
+                overflow: hidden;
+                border: 2px solid #000;
+                border-radius: 8px;
+            }
+            .team-name{
+                float: left;
+                margin-left: 30px;
+                font-size: 18px;
+                color: #ffffff;
+            }
+            .team-jackpot{
+                float: right;
+                font-size: 30px;
+                color: #f5c751;
+                &::after{
+                    content: 'ETH';
+                    font-size: 16px;
+                }
+            }
+        }
+        li:nth-child(2n){
+            background: #1b1b1b;
+        }
+    }
+}
+.statistics{
+    >h2{
+        text-indent: 40px;
+        line-height: 50px;
+        font-size: 16px;
+        color: #fff;
+    }
+    .teamscore{
+        li{
+            position: relative;
+            height: 125px;
+            padding: 0 40px;
+            .title{
+                float: left;
+                line-height: 80px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .eth{
+                float: right;
+                line-height: 90px;
+                font-size: 30px;
+                color: #f5c751;
+                &::after{
+                    content: ' ETH';
+                    font-size: 20px;
+                }
+            }
+            .years{
+                float: right;
+                line-height: 90px;
+                font-size: 30px;
+                color: #f5c751;
+                &::after{
+                    content: ' Years';
+                    font-size: 20px;
+                }
+            }
+            .uxdt{
+                position: absolute;
+                right: 40px;
+                top: 67px;
+                line-height: 26px;
+                font-size: 20px;
+                color: #39ca68;
+                &::after{
+                    content: ' USDT';
+                    font-size: 20px;
+                    font-size: 14px;
+                }
+            }
+            .seconds{
+                position: absolute;
+                right: 40px;
+                top: 67px;
+                line-height: 26px;
+                font-size: 20px;
+                color: #39ca68;
+                &::after{
+                    content: ' Seconds';
+                    font-size: 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+        li:nth-child(2n+1){
+            background: #1b1b1b;
+        }
+    }
+}
+.buy-loading{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #171717;
+    width: 50%;
+    font-size: 0.3rem;
+    line-height: 1rem;
+    text-align: center;
+}
+@media (max-width: 550px) {
+    .banner {
+        .msg1,
+        .msg2 {
+            line-height: 36px;
+            font-size: 22px;
+        }
+        .msg3 {
+            margin-top: 10/1.8px;
+            height: 95/1.8px;
+            line-height: 95/1.8px;
+            font-size: 78/1.8px;
+            background: url(../img/bg-bannereth.png) no-repeat center;
+            background-size: 611/1.8px;
+            &::after {
+                margin-left: 20/2px;
+                width: 28/2px;
+                height: 47/2px;
+                overflow: hidden;
+                background: url(../img/icon-eth.png) no-repeat center;
+                background-size: cover;
+            }
+        }
+        .headtimer {
+            height: 72/1.8px;
+            line-height: 46/1.8px;
+            font-size: 34/1.8px;
+        }
+        a {
+            height: 50/1.8px;
+            line-height: 50/1.8px;
+            font-size: 22/1.8px;
+            i {
+                left: 40/1.8px;
+                padding-left: 33/1.8px;
+                &::before {
+                    top: 14/1.8px;
+                    width: 21/1.8px;
+                    height: 22/1.8px;
+                    overflow: hidden;
+                    background: url(../img/icon-diamond.png) no-repeat center;
+                    background-size: cover;
+                }
+            }
+            &:hover {
+                animation: none;
+            }
+        }
+    }
+    .team-grid,
+    .list {
+        width: 95%; 
+        margin: 0 auto 0.5rem;
+    }
+}
+.EN{
+    .put-forward-list .put-forward .count::after{
+        content: '';
+    }
+}
+
+
+.xyj-step{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    .btn-close{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        background: url("../img/btn-close.png") no-repeat center;
+    }
+    .main{
+        position: absolute;
+        width: 92%;
+        padding: 20px 20px 30px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: #262626;
+        color: #fff;
+        border-radius: 6px;
+    }
+    .p1{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+    }
+    .p2,.p3{
+        font-size: 14px;
+    }
+    .p3{
+        margin-bottom: 10px;
+    }
+    .btn-down{
+        display: block;
+        width: 50%;
+        line-height: 3;
+        margin: 20px auto;
+        background: linear-gradient(#d2aa46, #7b642c);
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    .input-box{
+        width: 80%;
+        margin: 0 auto 0;
+        line-height: 3;
+        overflow: hidden;
+        background: #fff;
+        color: #111;
+        border-radius: 6px;
+        font-size: 14px;
+        text-align: center;
+        a{
+            display: block;
+            padding: 0 20px;
+            float: right;
+            background: #b9bac5;
+            background: linear-gradient(#d2aa46, #7b642c);
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+}
+.xyj-tips{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+    .btn-close{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        background: url("../img/btn-close.png") no-repeat center;
+    }
+    .main{
+        position: absolute;
+        width: 30%;
+        padding: 20px 20px 30px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: #262626;
+        color: #fff;
+        border-radius: 6px;
+    }
+    .p1{
+        font-size: 20px;
+        line-height: 3;
+    }
+    .p2{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .bottom-main{
+        margin-top: 50px;
+        a{
+            margin-left: 20px;
+            text-decoration: underline;
+
+        }
+    }
+}

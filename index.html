@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 53.3333px; overflow: auto;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <title data-trans="gameName">造梦西游</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/index.min.css">
+    <link rel="stylesheet" href="./css/index0727.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/alertify.min.css">
+    <script>
+        let deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 400) {
+            deviceWidth = 400;
+        }
+        if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        window.onresize = function () {
+            let deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 400) {
+                deviceWidth = 400;
+            }
+            if (deviceWidth < 320) {
+                deviceWidth = 320;
+            }
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        }
+    </script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/translate.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>
+                <div>
+                    <img class="logo" src="./img/logo.png" alt="">
+                    <span class="title" data-trans="gameName">造梦西游</span>
+                </div>
+                <ul class="info ">
+                    <!--<li class="lottery-time-wrapper">-->
+                    <!--<i class="iconfont icon-daojishi"></i>-->
+                    <!--<span class="lottery_time" style="color: #fff;">00:00:00</span>-->
+                    <!--</li>-->
+                    <li>
+                        <a class="head-share js_share fr" href="#sharing-rewards">
+                            <img src="./img/icon-gift.png" alt="">
+                            <p data-trans="Recommended">推荐奖励</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" target="_blank"  class="owner-keys" id="jumpToContact" data-trans="合约">合约</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javascript:;" class="owner-keys js_jumpToEdu"  data-trans="教程">教程</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="locale">EN</a>
+                    </li>
+                </ul>
+            </h1>
+            <div class="notice hide" id="notice">
+                <h6>【公告】西游游戏已升级上线</h6>
+                <span class="operator">
+                    <span>查看全文</span>
+                    <span id="closeNotice" style="padding: 0.01rem 0.2rem">X</span>
+                </span>
+            </div>
+        </header>
+        <section class="banner">
+            <p class="msg1" data-trans="js_gloTitle"></p>
+            <p class="msg2" data-trans="js_gloTitle2"></p>
+            <div class="msg3">
+                <p>
+                    0.0000
+                </p>
+            </div>
+            <span class="headtimer">00:00:00</span>
+            <a href="javascript:;" class="js_buy">
+                <i>x1</i>
+                <span class="js_buy_text" data-trans="快速购买一颗金钻，赢得超级奖池！">快速购买一颗金钻，赢得超级奖池！</span>
+            </a>
+        </section>
+        <div class="index-container">
+            <section class="list hide" style="margin: 0; display: none">
+                <div class="list-content">
+                    <p class="list-title" data-trans="briefingTrader">实时成交</p>
+                    <ul class="transaction-list" id="transactionList">
+                        <li class="buy-style">
+                            <em>g**e</em>
+                            <span>买：0.2027 ETH</span>
+                            <div>
+                                <span>11:18:36</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>s**c</em>
+                            <span>买：0.6075 ETH</span>
+                            <div>
+                                <span>11:16:53</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>z**1</em>
+                            <span>买：0.2026 ETH</span>
+                            <div>
+                                <span>11:16:04</span>
+                            </div>
+                        </li>
+                        <li class="put-style">
+                            <em>e**1</em>
+                            <span>提：60686.4190 ETH</span>
+                            <div>
+                                <span>11:13:04</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>g**e</em>
+                            <span>买：0.2026 ETH</span>
+                            <div>
+                                <span>11:12:26</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>b**t</em>
+                            <span>买：0.2026 ETH</span>
+                            <div>
+                                <span>11:12:19</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>a**e</em>
+                            <span>买：0.2026 ETH</span>
+                            <div>
+                                <span>11:12:11</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>b**t</em>
+                            <span>买：0.2025 ETH</span>
+                            <div>
+                                <span>11:11:49</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>a**e</em>
+                            <span>买：0.2025 ETH</span>
+                            <div>
+                                <span>11:11:11</span>
+                            </div>
+                        </li>
+                        <li class="buy-style">
+                            <em>f**b</em>
+                            <span>买：0.2025 ETH</span>
+                            <div>
+                                <span>11:05:15</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="team-grid">
+                <div class="tabs">
+                    <div class="tab-title" id="sharing-rewards">
+                        <span class="active" data-trans="tabBuyTitle">购 买</span>
+                        <span data-trans="tabDrawTitle">提 现</span>
+                        <span data-trans="Recommended" >推荐奖励</span>
+                    </div>
+                    <div class="tab-content active">
+                        <div class="tab-buy">
+                            <div class="tip" data-trans="buyTip">*金钻的价格会根据更多用户的购买数量而不断增长</div>
+                            <div class="input-container">
+                                <span class="icon-wrapper icon-diamond">
+                                </span>
+                                <div class="input-inner">
+                                    <input id="count" type="text" placeholder="1 金钻" min="1">
+                                </div>
+                                <span class="eth-count" id="ethCount">@ 0 ETH</span>
+                            </div>
+                            <div class="count-container">
+                                <div class="count-wrapper" data-num="10">
+                                    <span>+10</span>
+                                    <span class="hidexs" data-trans="js_keys">金钻</span>
+                                </div>
+                                <div class="count-wrapper" data-num="20">
+                                    <span>+20</span>
+                                    <span class="hidexs" data-trans="js_keys">金钻</span>
+                                </div>
+                                <div class="count-wrapper" data-num="50">
+                                    <span>+50</span>
+                                    <span class="hidexs" data-trans="js_keys">金钻</span>
+                                </div>
+                                <div class="count-wrapper" data-num="100">
+                                    <span>+100</span>
+                                    <span class="hidexs" data-trans="js_keys">金钻</span>
+                                </div>
+                                <div class="count-wrapper" data-num="200">
+                                    <span>+200</span>
+                                    <span class="hidexs" data-trans="js_keys">金钻</span>
+                                </div>
+                            </div>
+                            <div class="select-team">
+                                <div>
+                                    <button class="btn btn-buy" data-trans="buyBtn">使用 ETH 购买</button>
+                                    <button class="btn btn-buy2 js_btn_earn" data-trans="buyBtn_earn">使用收益购买</button>
+                                </div>
+                                <h6 class="title choseteam" data-trans="chooseTeam">选择团队</h6>
+                                <div class="team-container">
+                                    <div class="team-wrapper team-wrapper--checked" data-team="wukong">
+                                        <img src="./img/a.png" alt="" class="pic">
+                                        <span class="name" data-trans="js_team1">悟空</span>
+                                        <span class="desc" data-trans="大部分收益"></span>
+                                        <span>
+                                            <em data-trans="底池：">底池：</em>
+                                            <strong>25%</strong>
+                                        </span>
+                                        <span>
+                                            <em data-trans="分红：">分红：</em>
+                                            <strong>62%</strong>
+                                        </span>
+                                    </div>
+                                    <div class="team-wrapper" data-team="shifu">
+                                        <img src="./img/b.png" alt="" class="pic">
+                                        <span class="name" data-trans="js_team2">唐僧</span>
+                                        <span class="desc" data-trans="平均分配"></span>
+                                        <span>
+                                            <em data-trans="底池：">底池：</em>
+                                            <strong>40%</strong>
+                                        </span>
+                                        <span>
+                                            <em data-trans="分红：">分红：</em>
+                                            <strong>47%</strong>
+                                        </span>
+                                    </div>
+                                    <div class="team-wrapper" data-team="bajie">
+                                        <img src="./img/c.png" alt="" class="pic">
+                                        <span class="name" data-trans="js_team3">八戒</span>
+                                        <span class="desc" data-trans="以贪婪为食"></span>
+                                        <span>
+                                            <em data-trans="底池：">底池：</em>
+                                            <strong>65%</strong>
+                                        </span>
+                                        <span>
+                                            <em data-trans="分红：">分红：</em>
+                                            <strong>22%</strong>
+                                        </span>
+                                    </div>
+                                    <div class="team-wrapper" data-team="shaseng">
+                                        <img src="./img/d.png" alt="" class="pic">
+                                        <span class="name" data-trans="js_team4">沙僧</span>
+                                        <span class="desc" data-trans="独立战斗"></span>
+                                        <span>
+                                            <em data-trans="底池：">底池：</em>
+                                            <strong>82%</strong>
+                                        </span>
+                                        <span>
+                                            <em data-trans="分红：">分红：</em>
+                                            <strong>5%</strong>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content ">
+                        <div class="tab-put-forward">
+                            <div class="tip " data-trans="drawTip">*提示：您的收益可随时提现</div>
+                            <div class="put-forward-list">
+                                <div class="put-forward">
+                                    <h6 class="title icon-diao" data-trans="withdrawAvailable">你的金钻</h6>
+                                    <div class="count total-award--eth js_your_key">0</div>
+
+                                </div>
+                                <div class="put-forward">
+                                    <h6 class="title icon-gift" data-trans="rebate">分享奖励</h6>
+                                    <div class="eth share-award">0</div>
+                                </div>
+                                <div class="put-forward total">
+                                    <h6 class="title icon-eth" data-trans="totalAward">你的收益</h6>
+                                    <div class="eth total-award">0</div>
+                                    <span class="usdt total-award-usdt">= 0 USDT</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-put js_withdraw" data-trans="withdraw">全部提现</button>
+                        </div>
+                    </div>
+                    <div class="tab-content joinus ">
+                        <div class="js_noid">
+                            <p class="tip" data-trans="*让更多人参与造梦西游游戏">*让更多人参与造梦西游游戏</p>
+                            <div class="joinus-btn">
+                                <span data-trans="js_linkMsg" class="referrals-tip">购买一个代号来生成推广链接，并直接分享高达10%的佣金</span>
+                                <a href="javascript:;" class="btn buyceo js_buyceo" data-trans="js_buyLink">注册一个专属的推广代号</a>
+                            </div>
+                        </div>
+                        <div class="js_hasid jumbotron jumbotron-adjust hide">
+                            <p class="tip2" data-trans="邀请说明：">邀请说明：</p>
+                            <p class="tip" data-trans="邀请其他玩家参与，你将获得他们的10%投注">邀请其他玩家参与，你将获得他们的10%投注
+                            </p>
+                            <div class="referrals_cnt">
+                                <ul>
+                                    <li>
+                                        <p class="title" data-trans="钱包推荐地址：">钱包推荐地址：</p>
+                                        <p class="msg" id="mylink">http://exitedscam.me/</p>
+                                        <button class="btn2 js_copy_btn" id="copyCeoLink" data-clipboard-target="#mylink" data-trans="复制地址">
+                                            复制地址
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <p class="title" data-trans="匿名推荐地址："></p>
+                                        <p class="msg" id="idlink">http://exitedscam.me/</p>
+                                        <button class="btn2 js_copy_btn" id="copyCeoLink" data-clipboard-target="#idlink"  data-trans="复制地址">
+                                            复制地址
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <p class="title" data-trans="名字推荐地址："></p>
+                                        <p class="msg" id="namelink">http://exitedscam.me/</p>
+                                        <button class="btn2 js_copy_btn" id="copyCeoLink" data-clipboard-target="#namelink"  data-trans="复制地址">
+                                            复制地址
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row hide">
+                                <div class="col">
+                                    <button href="" class="btn js_buyceo">
+                                        <svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+                                        </svg>
+                                        <!-- <i class="fas fa-check"></i> -->Register a new name</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="list">
+                <div class="list-content">
+                    <div class="tabs">
+                        <div class="tab-title">
+                            <span class="list-title round-title active"><em data-trans="js_round">回 合</em></span>
+                            <span class="list-title round-title" data-trans="js_teamName">团 队</span>
+                            <span class="list-title round-title" data-trans="js_data">统 计</span>
+                        </div>
+                        <div class="tab-content round active">
+                            <ul class="round-list">
+                                <li class="winner hide">
+                                    <div data-trans="recentBuyer">最后购买者：</div>
+                                    <div class="account">g44dqnzxgyge</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <em data-trans="js_round2">回 合</em><em class="js_round"> 0</em>
+                                    </div>
+                                </li>
+                                <li class="lottery_time">
+                                    <div data-trans="remainingTime">本轮剩余时间：</div>
+                                    <div class="dead-time">
+                                        <p>00:00:00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-trans="totalJackpot">奖励池总数</div>
+                                    <div>
+                                        <p class="total_prize_pool">0</p>
+                                        <!-- <span class="total-usdt">= 0 USDT</span> -->
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="round-list2">
+                                <li>
+                                    <span class="icon-diao" data-trans="yourGems">你的金钻</span>
+                                    <p class="owner-keys">0 </p>
+                                </li>
+                                <li>
+                                    <span class="icon-gift" data-trans="rebate">分享奖励</span>
+                                    <p class="share-award">0.0000 ETH</p>
+                                </li>
+                                <li>
+                                    <span class="icon-eth" data-trans="totalAward">总收益</span>
+                                    <p class="total-award">0 ETH</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content team ">
+                            <h2 data-trans="js_teamName" >团队</h2>
+                            <ul class="team-box">
+                                <li>
+
+                                    <img src="./img/a.png" alt="">
+                                    <p class="team-name" data-trans="js_team1">悟空</p>
+                                    <p class="team-jackpot js_wukong">0 </p>
+                                </li>
+                                <li>
+
+                                    <img src="./img/b.png" alt="">
+                                    <p class="team-name" data-trans="js_team2">唐僧</p>
+                                    <p class="team-jackpot js_shifu">0 </p>
+                                </li>
+                                <li>
+
+                                    <img src="./img/c.png" alt="">
+                                    <p class="team-name" data-trans="js_team3">八戒</p>
+                                    <p class="team-jackpot js_bajie">0 </p>
+                                </li>
+                                <li>
+                                    <img src="./img/d.png" alt="">
+                                    <p class="team-name" data-trans="js_team4">沙僧</p>
+                                    <p class="team-jackpot js_shaseng">0 </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content statistics ">
+                                <h2 data-trans="js_data">统计</h2>
+                                <ul class="teamscore">
+                                    <li>
+                                        <p class="title" data-trans="js_keys_val">购钻总额</p>
+                                        <p class="eth js_keys_value">0</p>
+                                        <span class="uxdt js_keys_usdt">= 0</span>
+                                    </li>
+                                    <li>
+                                        <p class="title" data-trans="js_dis_val">分配总额</p>
+                                        <p class="eth js_dis_value">0</p>
+                                        <span class="uxdt js_dis_usdt">= 0</span>
+                                    </li>
+                                    <li>
+                                        <p class="title" data-trans="js_time">购买时间</p>
+                                        <p class="years  js_year ">0</p>
+                                        <span class="seconds js_second">= 0</span>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+    </main>
+    <div class="code-layer" id="code-layer">
+        <div class="layer-content">
+            <p>邀请人</p>
+            <input id="code-val" type="text" placeholder="邀请人 ETH 账户名（选填）">
+            <button class="code-btn" disabled="">确认</button>
+        </div>
+        <span class="close-btn" disabled=""></span>
+    </div>
+
+    <div class="rule-layer" id="rule-layer">
+        <div class="layer-content">
+            <p>本轮剩余时间</p>
+            <span>
+                1.每购买一次金钻计时器将重置。
+                <br> 2.金钻价格将随着被购买的数量增加而进行线性增长。
+                <br> 3.当计时器达到零时，购买最后一颗金钻的玩家将获得奖池的48%！
+            </span>
+            <p>奖励池总数</p>
+            <span>目前奖励池中ETH的数量，48%将归最后一位购买金钻者所有</span>
+            <p>你的金钻数</p>
+            <span>代表目前你已经购买的金钻数量</span>
+            <p>分享奖励</p>
+            <span>邀请好友填写您的ETH账号为邀请人可直接分享好友购买值的10%奖励</span>
+            <p>总收益</p>
+            <span>代表你目前邀请奖励+分红奖励(包括已提现数量)之和</span>
+        </div>
+        <span class="close-btn" onclick="xyjindex.closePop('#rule-layer')"></span>
+    </div>
+    <!-- show -->
+    <div class="modal fade" id="vanity" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-body">
+                    <!-- Name chooser -->
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead nomarginb" data-trans="在区块链上记录你的名字">在区块链上记录你的名字</p>
+                        </div>
+                        <div class="col-auto">
+                            <p class="text-right nomarginb">
+                                <a href="#" class="closemodal">
+                                    <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 352 512" data-fa-i2svg="">
+                                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                                    </svg>
+                                    <!-- <i class="fas fa-times"></i> -->
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-group mb-3" style="margin-top: 10px; font-size: 16px;">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-yel" type="button" id="randomName">
+                                                <span data-trans="随机">随机</span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control text-center" type="text" id="nameInput">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="small">
+                                <br>
+                                <div data-trans="名称必须遵循以下规则：">名称必须遵循以下规则：</div>
+                                <span data-trans="- 必须是唯一的">- 必须是唯一的</span>
+                                [<a style="color:#00c9ed" href="https://fomo3d.eu/" data-trans="数据库唯一的名称">数据库唯一的名称</a>]
+                                <div data-trans="-32个字符或更少">-32个字符或更少</div>
+                                <div data-trans="-A-Z（小写）">-A-Z（小写）</div>
+                                <div data-trans="-名称不能只是数字，但允许使用数字">-名称不能只是数字，但允许使用数字</div>
+                                <div data-trans="- 没有特殊字符">- 没有特殊字符</div>
+                                <div data-trans="- 字符之间不能有多个空格">- 字符之间不能有多个空格</div>
+                                <br>
+                                <br>
+                                <div data-trans="名称是永久性的。 但只有您最近的名字才会显示在排行榜/游戏用户界面上。 您可以拥有任意数量的名称。">名称是永久性的（对于虚荣URLS）。 但只有您最近的名字才会显示在排行榜/游戏用户界面上。 您可以拥有任意数量的名称。</div>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-purp btn-block btn-lg" id="namePurchase">
+                                <svg class="svg-inline--fa fa-ethereum fa-w-10" aria-hidden="true" data-prefix="fab" data-icon="ethereum" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512" data-fa-i2svg="">
+                                    <path fill="currentColor" d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path>
+                                </svg>
+                                <!-- <i class="fab fa-ethereum"></i> -->
+                                <span data-trans="花费0.01ETH购买">花费0.01ETH购买</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /Name chooser -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="price-layer" id="price-layer">
+        <div class="layer-content">
+            <p>金钻价格公式</p>
+            <span>
+                金钻价格=0.016+(N-1000000)*0.00000002【N为当前金钻总数+1】
+            </span>
+        </div>
+        <span class="close-btn" disabled=""></span>
+    </div>
+    <div class="notice-layer" id="noticeLayer">
+        <div class="layer-content">
+            <h1>【公告】西游游戏已升级上线</h1>
+            <p>西游游戏已完成升级，修复黑客造成的数据问题，攻击者并未影响用户的资产和奖励池的安全。已完成数据映射和合约升级，用户可以正常提取分红奖励，并将继续参与购买、最后获奖者竞争和团队奖励。</p>
+            <p>【备注】用户需要在 SCATTER 钱包“权限”中删除原有授权身份，再点击右上角“授权”即可。</p>
+            <div class="from">
+                <span>西游游戏团队</span>
+                <span>2018.7.26 </span>
+            </div>
+        </div>
+        <span class="close-btn" disabled=""></span>
+    </div>
+    <div class="fixed-bottom hide">
+        <a href="https://eosfo.io/game_guide.pdf?v=0756" target="_blank">
+            <em></em>
+            <span data-trans="tradingRules">交易规则</span>
+        </a>
+    </div>
+    <div class="alertify hide">
+        <div class="dialog">
+            <div>
+                <p class="msg">您需要登陆MetaMask钱包来发送付款.</p>
+                <nav>
+                    <button class="ok" tabindex="1">Ok</button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="pop-success">
+        其次，活动的说明：感谢本次所有参加西游游戏的玩家
+    </div>
+    <div class="loading-layer" >
+        加载中...
+    </div>
+    <div class="buy-loading show">
+        Please check your Metamask...
+    </div>
+
+    <div class="xyj-step hide js_showMobile">
+        <div class="main">
+            <a href="javascript:;" class="btn-close" onclick="$(this).parents('.js_showMobile').addClass('hide')"></a>
+            <p class="p1" data-trans="js_mobileTitle">
+                手机游戏步骤
+            </p>
+            <p class="p2" data-trans="js_mobile_1">
+                1.手机版参与游戏,需要安装,需要安装
+            </p>
+            <a href="https://trustwalletapp.com/" target="_blank" data-trans="js_mobile_down" class="btn-down">
+                下载安装
+            </a>
+            <p class="p3" data-trans="js_mobile_2">
+                2.打开网站
+            </p>
+            <div class="input-box">
+                <span id="js_copyLink">exitedscam.me</span>
+                <a id="copyCeoLink" class="js_copy_btn" data-clipboard-target="#js_copyLink" href="javascript:;" data-trans="js_copyLink">
+                    复制
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="xyj-tips hide js_showPc">
+        <div class="main">
+            <a href="javascript:;" onclick="$(this).parents('.js_showPc').addClass('hide')" class="btn-close"></a>
+            <p class="p1" data-trans="js_pc_tip">游戏提示</p>
+            <p class="p2" data-trans="js_pc_install">
+                请先安装并登陆Metamask钱包
+            </p>
+            <div class="bottom-main">
+                <span data-trans="js_pc_noWall">没有Metamask钱包，如何安装？</span>
+                <a href="javascript:;" class="js_jumpToEdu" data-trans="js_chakan">查看</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/alertify.min.js"></script>
+
+    <!-- test js -->
+    <!-- <script src="./testJs/trust.js"></script> -->
+    <!-- <script src="/testJs/trust-init.js"></script> -->
+    <!-- <script src="./js/web3.min.js"></script> -->
+    <!--<script src="./js/trust.js"></script>-->
+    <script src="./js/metamask.js"></script>
+    <script src="./js/clipboard.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123155565-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-123155565-1');
+</script>
+</html>
